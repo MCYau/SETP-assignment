@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Home Page</title>
+        <style>
+            body{
+                padding: 0px;
+                width: 98vw;
+            }
+
+            header{
+                grid-row: 1 / 3;
+                display: grid;
+                grid-template-rows: repeat(4, 1fr);
+                height: 180px;
+            }
+
+            .logo{
+                grid-row: 1 / 4;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content:center;               
+            }
+
+            .nav{
+                background-color: #00eeff;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+
+            .navList li{
+                display: inline;
+                margin-right: 100px;
+            }
+
+            .navList a{
+                border: 1px solid #00eeff;
+                background-color: #00eeff;
+                padding: 5px;
+                color: black;
+                text-decoration: none; 
+                font-family: Apple Chancery, cursive;
+            }
+
+            .navList a:hover{
+                text-decoration: underline;
+                font-size: larger;
+            }
+
+
+            .slideshow-container{
+                grid-column: 1 / 6;
+                grid-row: 1 / 2;
+                background-color: #cdd9ff;
+                text-align: center;
+            }
+
+            .fade{
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @keyframes fade{
+                from {opacity: 0.4;}
+                to {opacity: 1;}
+            }
+
+            article{
+                grid-column: 1 / 6;
+                grid-row: 2 / 3;
+                font-family: Apple Chancery, cursive;
+                padding: 2em;
+                color: #004F4E;
+            }
+
+            footer{
+                height: 400px;
+                background-color: #004F4E;
+                font-family: Apple Chancery, cursive;
+                color: white;
+                padding-left: 3em;
+                padding-top: 2em;
+                font-size: 1.5em;
+            }
+
+            .fb:hover{
+                width: 60px;
+                height: 60px;
+                transition: 0.1s;
+            }
+
+            .twitter:hover{
+                width: 55px;
+                height: 55px;
+                transition: 0.1s;
+            }
+
+            .instagram:hover{
+                width: 60px;
+                height: 60px;
+                transition: 0.1s;
+            }
+
+            .youtube:hover{
+                width: 70px;
+                height: 70px;
+                transition: 0.1s;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="MCwatchlogo.PNG" height="65"/>
+            </div>
+            <nav class="nav">
+                <ul class="navList">
+                    <!--<li><a href="BookingPage.html">Booking Page</a></li >-->
+                    <!--<li><a href="RoomType.html">Room Type</a></li>-->
+                    <li><a href="Shop.html">Shop</a></li>
+                    <li><a href="Testimonials.html">Testimonials</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="slideshow-container">
+                <div class="my-slides fade">
+                    <img src="gshockgmwb5000banner.jpeg" width="80%" height="600">
+                </div>
+                <div class="my-slides fade">
+                    <img src="minion-suite1.jpg" width="80%" height="600">
+                </div>
+                <div class="my-slides fade">
+                    <img src="villa-suite1.jpg" width="80%" height="600">
+                </div>
+                <div class="my-slides fade">
+                    <img src="president-suite8.jpg" width="80%" height="600">
+                </div>
+            </div>
+            <script>
+                var slideIndex = 0;
+                showSlides();
+                
+                function showSlides(){
+                    var i;
+                    var slides = document.getElementsByClassName("my-slides")
+                    for (i = 0; i < slides.length; i++){
+                        slides[i].style.display = "none";
+                    }                   
+                    slides[slideIndex].style.display = "block";
+                    slideIndex++;
+                    if (slideIndex >= slides.length){
+                        slideIndex = 0;
+                    }
+                    setTimeout(showSlides, 2000);
+                }
+            </script>
+
+            <article>
+                <h1>Welcome to Loews Portofino Bay Hotel at Universal Orlando</h1>
+                <p>Here at Loews Portofino Bay Hotel at Universal Orlando Resort, fun gets an Italian accent—and everyone gets to have an unforgettable time. Since our property is located bayside, right on the grounds of Universal Orlando, the thrills couldn’t be any closer. Nestled along the water, and with details like cobblestone streets and towering Italian cypress trees just like the seaside town of Portofino, Italy, you’ll swear you’re actually in Europe. But the magic doesn’t stop there. Guests of our Italian-themed hotel in Orlando receive exclusive theme park benefits that will make your time at Universal Orlando even sweeter, or as the Italians say, dolce. After hours of excitement at the parks, come back to the hotel and take the time to sip an espresso or enjoy a creamy gelato in our Harbor Piazza as you listen to live music. It’s the perfect way to end the day.</p>
+                <p>Loews Portofino Bay Hotel—all the charm of Italy, with Florida sunshine and theme park fun guaranteed.</p>
+                <br><br>
+                <h3>Useful Information</h3>
+                <ul>
+                    <li><b>Check in:</b> 4 PM</li>
+                    <li><b>Check out:</b> 11 AM</li>
+                    <li><b>Overnight Guest Parking</b><br>
+                       Hourly Rates: <br>
+                       - Under 5 Minutes: complimentary<br>
+                       - 5-10 Minutes: $10 plus tax per vehicle<br>
+                       - 30+ Minutes: $45 per vehicle<br>
+                       Daily Rates: <br>
+                       - Self-Parking: $30 plus tax per vehicle<br>
+                       - Valet: $42 plus tax per vehicle, per night<br>
+                    </li>
+                    <li>Business Center: 24 hours a day, with room key (Fees apply)</li>
+                    <li>All guestrooms are non-smoking</li>
+                    <li>Complimentary Wi-Fi in all public space and guestrooms</li>
+                    <li><b>Cribs/Rollaways:</b><br>
+                        - Cribs are complimentary. Rollaways are available on a first-come, first-served basis for $35 plus tax per day (one rollaway allowed per room).<br>
+                    </li>
+                    <li><b>Extra Person Charges:</b><br>
+                        - An additional charge of $40 per extra adult applies for more than 2 adult guests per room. Maximum occupancies may require a rollaway at an additional fee plus tax per day. Only one rollaway is allowed per room. Available on a first come first serve basis.<br>
+                    </li>
+                </ul>
+                <br>
+                <h3>Standard Cancellation Policy</h3>
+                <ul>
+                    <li>6 days or more days prior to arrival: Full Refund</li>
+                    <li>0- 5 days prior to arrival: Charged one night's room rate plus tax</li>
+                </ul>
+                <p>PLEASE NOTE: Deposits are forfeited if guest checks out of the hotel prior to the check-out date.</p>
+            </article>
+        </main>
+        
+        <footer>
+            <img src="loews-logo2.svg" >
+            <br>
+            <p>5601 Universal Boulevard, Orlando, Florida, 32819</p>
+            <p>Follow Us on</p>
+            <a href="https://www.facebook.com/LoewsPortofinoBay" target="_blank"><img class="fb"src="facebook.png" width="55px" height="55px" style="position: relative; top: 5px; margin-right: 20px;"></a>
+            <a href="https://twitter.com/Loews_Hotels#LoewsPortofinoBay" target="_blank"><img class="twitter"src="twitter.png" width="50px" height="50px" style="position: relative; top: 5px; margin-right: 20px;"></a>
+            <a href="https://www.instagram.com/loewshotels/" target="_blank"><img class="instagram"src="instagram.png" width="55px" height="55px" style="position: relative; top: 7px; margin-right: 12px;"></a>
+            <a href="https://www.youtube.com/user/loewshotels" target="_blank"><img class="youtube"src="youtube.png" width="65px" height="65px" style="position: relative; top: 12px;"></a>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3506.9822299151524!2d-81.4617575!3d28.4800818!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7706a451b849d%3A0xef53005ed2b09c1b!2sLoews%20Portofino%20Bay%20Hotel%20at%20Universal%20Orlando!5e0!3m2!1sen!2ssg!4v1632511822177!5m2!1sen!2ssg" width="900" height="400" style="border:0; border-radius: 10px; position:absolute; top: 1825px; left: 850px;" allowfullscreen="" loading="lazy"></iframe>
+        </footer>
+    </body>
+</html>
